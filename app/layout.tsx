@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Fraunces, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  axes: ["opsz"],
+});
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 
 export const metadata: Metadata = {
   title: "Rajasvi Vinayak Sharma",
@@ -24,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
       <head>
         <link rel="icon" href="/images/UCSDlogo.png" type="image/png" />
       </head>
