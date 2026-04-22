@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
       <footer className="pt-10 pb-4 border-t border-gray-100 text-xs text-gray-400 text-center">
-        Design inspired by{" "}
+        Inspired by{" "}
         <a
           href="https://jonbarron.info/"
           target="_blank"

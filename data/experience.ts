@@ -13,7 +13,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Moveworks (acquired by ServiceNow)",
     companyUrl: "https://www.moveworks.com",
-    logo: null,
+    logo: "/images/mw_logo.jpg",
     logoWidth: 130,
     role: "Senior Machine Learning Engineer",
     period: "Jan 2025 – Present",
