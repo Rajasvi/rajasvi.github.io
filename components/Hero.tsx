@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-1 text-sm">
           {[
             { label: "Email", href: "mailto:rajasvi777@gmail.com" },
-            { label: "Resume", href: "/Rajasvi_MW_20260228.pdf", external: true },
+            { label: "Resume", href: "/Rajasvi_Vinayak_Sharma_Resume.pdf", external: true },
             { label: "GitHub", href: "https://github.com/rajasvi", external: true },
             { label: "LinkedIn", href: "https://www.linkedin.com/in/rajasvi", external: true },
           ].map((link) => (

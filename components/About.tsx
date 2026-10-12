@@ -61,7 +61,7 @@ export default function About() {
       <p>
         Feel free to check out my{" "}
         <a
-          href="/Rajasvi_MW_20260228.pdf"
+          href="/Rajasvi_Vinayak_Sharma_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:text-accent-hover transition-colors"

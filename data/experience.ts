@@ -19,11 +19,11 @@ export const experience: ExperienceItem[] = [
     period: "Jan 2025 – Present",
     location: "Mountain View, CA",
     bullets: [
-      "Implemented an LLM-based relevance annotator for a search ranking task with batched listwise labeling, yielding a 10× speedup and enabling rapid creation of large training datasets with minimal human effort.",
-      "Reduced human labeling effort by ~60% by building a hybrid annotation workflow that uses LLM pre-annotation and escalates only ambiguous cases to human annotators for high-confidence eval sets.",
-      "Built a summary-quality evaluation pipeline for search-result summaries using LLM-as-judge and reference-less metrics (summary relevance, groundedness, citation validity), improving summary relevance from 60% → 90%.",
-      "Shipped a user-facing keyword-highlighting feature for search results by extracting document entities and query tokens to surface relevant terms in the UI.",
-      "Created a synthetic query generation pipeline to augment feature-specific queries (e.g., temporal, author) and add training signal for search ranking models.",
+      "Post-trained open-weight LLMs for listwise search reranking using SFT and PEFT/LoRA on multi-GPU FSDP, with a ListMLE + KL distillation objective and LLM-generated training labels over public and internal ranking datasets, lifting NDCG from 0.65 to 0.70.",
+      "Shipped the fine-tuned reranker to production as the second-stage ranker, replacing a pointwise BGE cross-encoder and using compressed passage embeddings to make listwise LLM reranking feasible within the existing latency budget.",
+      "Built the first LLM evaluation framework for search summarization serving over 5,000 customers, designing reference-less metrics for relevance, groundedness, citation validity, and multilingual fidelity, lifting summary relevance from 60% → 80%.",
+      "Established ranking evaluation infrastructure with labeled datasets for team-wide model and feature validation, and automated training data generation, reducing turnaround 10× via parallel LLM annotation of 500K query-document pairs.",
+      "Implemented a listwise LLM annotator for training and evaluation dataset creation, and designed a human-in-the-loop flow escalating ambiguous pairs to annotators to build high-confidence ranking eval sets with 60% less human labeling effort.",
     ],
   },
   {
@@ -35,10 +35,10 @@ export const experience: ExperienceItem[] = [
     period: "Apr 2023 – Dec 2024",
     location: "Remote, CA",
     bullets: [
-      "Designed deep learning model for post-meal glucose spike prediction, dual-purposed for exercise recommendations to effectively minimize post-meal glucose spikes by suggesting exercises to >10,000 users & help them lose weight.",
-      "Built Retrieval Augmented Generation (RAG) pipelines using LangChain for feature extraction from >1M free text meal logs to improve post-meal glucose spike prediction model accuracy.",
-      "Achieved a 12% boost in user meal logging engagement by creating a real-time anomaly detection algorithm for identifying point of interest events & rapid glucose level spikes.",
-      "Developed a meal recommendation engine using a hybrid collaborative & content filtering model based on features from multiple signals like continuous glucose data, meal/exercise/sleep logs, to help >10K users make healthy food choices.",
+      "Improved post-meal glucose spike prediction accuracy from 80% to 87% for over 10,000 users by running training-data ablations, correcting label noise, and engineering continuous glucose monitoring (CGM)-derived and user-behavior features.",
+      "Established Latest Spike Time as a predictor of weight loss through analysis across 500K weight logs and 200M CGM readings, shipped as a user-facing feature, with the analysis contributing to research published in Diabetes Technology and Therapeutics.",
+      "Increased meal-logging engagement 12% by shipping real-time glucose event detection that analyzes CGM curve shapes to prompt timely meal logging, feeding higher-quality training data into spike prediction models.",
+      "Reduced training data 10% while retaining accuracy gains using cleanup and training techniques that scaled to a corpus of over 1M free-text meal logs; experimented with meal embeddings on the same corpus to enrich item representations.",
     ],
   },
   {
@@ -50,9 +50,8 @@ export const experience: ExperienceItem[] = [
     period: "Jun 2022 – Sep 2022",
     location: "Santa Clara, CA",
     bullets: [
-      "Developed and deployed an end-to-end Time-series Anomaly Detection tool using Z-Score thresholding and Kubeflow pipelines to alert about malicious activities in 1000+ categories across 10M+ gaming sessions, reducing the alert response time from a few months to just 1 week.",
-      "Improved in-place A/B test analysis by creating a tool to identify the most affected sub-population using causal inference ML models like S-Learner, T-Learner, and Double ML methods (CausalML).",
-      "Built user engagement metrics using regression analysis & game completion modelling to identify & target disengaged down-grading users.",
+      "Cut alert response time from months to 1 week by building an end-to-end time-series anomaly detection tool (Z-score thresholding, Kubeflow pipelines) to flag malicious activity across over 1,000 categories and 10M gaming sessions.",
+      "Developed player engagement metrics via regression analysis to track progression and infer game completion, used as a feature in a churn prediction model and to target retention marketing.",
     ],
   },
   {
@@ -64,9 +63,8 @@ export const experience: ExperienceItem[] = [
     period: "Jun 2018 – Aug 2021",
     location: "Bengaluru, IN",
     bullets: [
-      "Fine-tuned BERT, RoBERTa, and DistilBERT Transformer models using Hugging Face to extract named contact-related entities from over 8 million emails per day, achieving an impressive 85.7% accuracy rate.",
-      "Built XGBoost & LGBM based models for classifying jurisdiction violations among Bloomberg trader conversations (>6M daily) by leveraging semantic & temporal information extracted from the data as features, achieving 78% precision.",
-      "Contributed to a real-time Big Data pipeline processing internal e-communications (emails, Skype IMs) for an in-house natural language surveillance search engine.",
+      "Fine-tuned BERT, RoBERTa, and DistilBERT models on over 8M daily emails to classify document zones (salutation, signature, disclaimer) and extract contact entities via a rule-based downstream pipeline, achieving 85.7% zone classification accuracy.",
+      "Built XGBoost and LGBM models to classify jurisdiction violations across over 6M daily Bloomberg trader conversations using semantic and temporal features, achieving 78% precision.",
     ],
   },
   {

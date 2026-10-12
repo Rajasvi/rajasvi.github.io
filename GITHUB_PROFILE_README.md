@@ -8,4 +8,4 @@ Previously: ML Engineer @ Signos · Data Scientist @ Nvidia · Data Scientist @ 
 
 🎓 MS ECE @ UC San Diego · B.Tech @ IIT BHU
 
-🌐 [rajasvi.xyz](https://rajasvi.xyz) · 📄 [Resume](https://rajasvi.xyz/Rajasvi_MW_20260228.pdf)
+🌐 [rajasvi.xyz](https://rajasvi.xyz) · 📄 [Resume](https://rajasvi.xyz/Rajasvi_Vinayak_Sharma_Resume.pdf)
